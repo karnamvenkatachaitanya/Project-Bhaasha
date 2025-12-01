@@ -1,0 +1,166 @@
+@layer components {
+
+    /* Main Form Container */
+    .cf-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .cf-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Grid Layout */
+    .cf-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        .cf-row {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .cf-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+
+    .cf-label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #374151;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Input Wrapper */
+    .cf-input-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Icon Positioning - Fixed Absolute Position */
+    .cf-icon {
+        position: absolute;
+        left: 1.25rem !important;
+        /* Force anchor 20px from left */
+        top: 40%;
+        transform: translateY(-50%);
+        color: #9ca3af;
+        pointer-events: none;
+        z-index: 10;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Special adjustment for Textarea Icon */
+    .cf-icon-top {
+        top: 1.25rem !important;
+        transform: none !important;
+    }
+
+    /* INPUT STYLES - Aggressive Overrides */
+    .cf-input {
+        width: 100%;
+        /* Force padding to clear the icon */
+        padding-left: 3.5rem !important;
+        /* 56px space for icon */
+        padding-right: 1rem !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+
+        /* Force explicit height for alignment */
+        height: 3.5rem !important;
+        line-height: 3.5rem !important;
+
+        border-radius: 14px;
+        border: 2px solid #f3f4f6;
+        background: #f9fafb;
+
+        font-size: 1rem;
+        color: #1f2937;
+        font-family: inherit;
+
+        transition: all 0.2s ease-in-out;
+        appearance: none;
+        box-sizing: border-box;
+    }
+
+    /* TEXTAREA Specifics */
+    textarea.cf-input {
+        height: auto !important;
+        min-height: 150px;
+        line-height: 1.5 !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        resize: none;
+    }
+
+    /* SELECT Specifics */
+    select.cf-input {
+        cursor: pointer;
+        padding-right: 2.5rem !important;
+        background-image: none !important;
+        /* Remove default arrows */
+    }
+
+    .cf-select-arrow {
+        position: absolute;
+        right: 1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6b7280;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    /* States */
+    .cf-input:focus {
+        outline: none;
+        border-color: #f97316;
+        background: white;
+        box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+    }
+
+    .cf-input:hover {
+        border-color: #d1d5db;
+    }
+
+    /* Button */
+    .cf-submit-btn {
+        margin-top: 1rem;
+        background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+        color: white;
+        padding: 1.1rem;
+        border-radius: 14px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        transition: all 0.3s;
+        width: 100%;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .cf-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+}

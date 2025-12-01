@@ -1,0 +1,355 @@
+/* LearnerDashboard.css */
+.dashboard-layout {
+    background: #f3f4f6;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+/* Nav */
+.dashboard-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    height: 70px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    background: #1a1a1a;
+    color: white;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.logo-text {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.streak-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff7ed;
+    color: #c2410c;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    background: #667eea;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* Content */
+.dashboard-content {
+    padding: 2rem 0;
+}
+
+.content-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.welcome-banner {
+    margin-bottom: 2rem;
+}
+
+.welcome-banner h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Stats */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-widget {
+    background: white;
+    padding: 1rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon.blue {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.stat-icon.yellow {
+    background: #fefce8;
+    color: #eab308;
+}
+
+.stat-icon.green {
+    background: #f0fdf4;
+    color: #22c55e;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-weight: 800;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+}
+
+/* Lesson Path */
+.learning-path {
+    background: white;
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h3 {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.see-all {
+    font-size: 0.85rem;
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lesson-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s;
+}
+
+.lesson-row:hover {
+    background: #f9fafb;
+}
+
+.status-indicator {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.dot.completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.dot.active {
+    background: #fff7ed;
+    border: 2px solid #f97316;
+}
+
+.dot.locked {
+    background: #f3f4f6;
+    color: #9ca3af;
+}
+
+.lesson-details {
+    flex: 1;
+}
+
+.lesson-details h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.lesson-details p {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.progress-bar-sm {
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin-top: 6px;
+    width: 60%;
+}
+
+.progress-bar-sm .fill {
+    height: 100%;
+    background: #f97316;
+    border-radius: 4px;
+}
+
+.action-btn {
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+}
+
+.lesson-row.locked .action-btn {
+    background: transparent;
+    color: #9ca3af;
+    border: 1px solid #e5e7eb;
+}
+
+/* Practice Card */
+.practice-hero-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    border-radius: 24px;
+    padding: 1.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.icon-circle {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.start-btn {
+    margin-top: 1rem;
+    background: white;
+    color: #1a1a1a;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.challenge-widget {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 24px;
+}
+
+.challenge-box input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin: 1rem 0 0.5rem;
+}
+
+.challenge-box button {
+    width: 100%;
+    background: #667eea;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+}
